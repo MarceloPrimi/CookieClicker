@@ -22,14 +22,14 @@ def web_cookie_open():
             linguage_portugues = WebDriverWait(driver, 30).until(
                 EC.element_to_be_clickable((By.XPATH, '//*[@id="langSelect-EN"]'))
             )
-            linguage_portugues.click()  # ✅ Agora realmente muda o idioma
+            linguage_portugues.click()  # Agora realmente muda o idioma
             log_event("INFO", "Idioma alterado para Português.")
 
         except Exception:
             log_event("WARNING", "Botão de idioma não encontrado. Continuando no idioma padrão.")
 
-        return driver  # ✅ Retorna o WebDriver ativo (Agora está no local correto)
+        return driver  # Retorna o WebDriver ativo (Agora está no local correto)
 
     except Exception as e:
         log_event("ERRO", f"Erro ao inicializar o site: {e}")
-        return None  # ❌ Retorna `None` se houver falha
+        return None  # Retorna `None` se houver falha

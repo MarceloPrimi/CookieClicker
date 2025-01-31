@@ -26,16 +26,13 @@ def buy_store_items(driver):
             except:
                 continue
 
-        log_event(f"INFO", f"Item comprado [{store_items_sorted}].")
+        log_event(f"Item", f"Item comprado "".")
 
         # Compra o item mais caro 1 vez
         try:
             most_expensive_item.click()
         except:
             pass
-
-        log_event("INFO", "Sequência de compras concluída (3x mais barato, 1x mais caro).")
-        last_purchase_time = time.time()  # Atualiza o tempo da última compra
 
     except Exception as e:
         log_event("ERRO", f"Erro ao acessar a loja: {e}")

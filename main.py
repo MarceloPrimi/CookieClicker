@@ -20,39 +20,39 @@ def executar_por_tempo(driver, segundos):
     start_time = time.time()
 
     while time.time() - start_time < segundos:
-        click_cookie(driver)  # 🚀 Agora o clique no cookie é chamado constantemente
-        buy_store_items(driver)  # 🛒 Compra itens disponíveis na loja
-        buy_upgrades(driver)  # 🔥 Compra upgrades disponíveis
+        click_cookie(driver)  # Agora o clique no cookie é chamado constantemente
+        buy_store_items(driver)  # Compra itens disponíveis na loja
+        buy_upgrades(driver)  # Compra upgrades disponíveis
 
     log_event("INFO", "Tempo de execução concluído.")
 
 def main():
     """Executa o bot do Cookie Clicker e depois exporta o salvamento."""
 
-    driver = web_cookie_open()  # 📌 Inicializa o WebDriver e abre o site
+    driver = web_cookie_open()  # Inicializa o WebDriver e abre o site
 
-    if driver is None:  # 📌 Se houver erro ao abrir o site, encerra o programa
+    if driver is None:  # Se houver erro ao abrir o site, encerra o programa
         log_event("ERRO", "Erro ao entrar no site.")
         return
 
     try:
-        # 📌 Carrega o progresso salvo antes de iniciar as ações
+        # Carrega o progresso salvo antes de iniciar as ações
         load_save_file(driver)
         time.sleep(5)
 
-        # 📌 Executa as ações por 5 minutos
-        executar_por_tempo(driver, 300)
+        # Executa as ações definidas por segundos
+        executar_por_tempo(driver, 100)
 
         log_event("INFO", "Salvando progresso...")
 
-        # 📌 Salva e baixa o progresso automaticamente
+        # Salva e baixa o progresso automaticamente
         save_and_download(driver)
 
     except Exception as e:
         log_event("ERRO", f"Erro fatal: {e}")
 
     finally:
-        driver.quit()  # 📌 Fecha o navegador corretamente
+        driver.quit()  # Fecha o navegador corretamente
         log_event("INFO", "Bot finalizado.")
 
 if __name__ == "__main__":

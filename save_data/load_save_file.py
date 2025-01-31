@@ -12,7 +12,7 @@ def load_save_file(driver):
     """Carrega um arquivo de salvamento ao iniciar a automação."""
     try:
         log_event("UPLOAD", "Carregando salvamento do Cookie Clicker...")
-        time.sleep(10)  # ✅ Mantido para garantir carregamento completo da página
+        time.sleep(10)  # Mantido para garantir carregamento completo da página
 
         # Clica no botão de configurações
         WebDriverWait(driver, 30).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="prefsButton"]/div'))).click()

@@ -1,0 +1,7 @@
+Timestamp,Tipo,Mensagem
+2025-01-31 14:10:37,INFO,Todos os logs foram apagados com sucesso.
+2025-01-31 14:10:41,INFO,Todos os logs foram apagados com sucesso.
+2025-01-31 14:11:47,ERRO,O arquivo 'C:\Users\Marcelo\Documents\Code\Python\Selenium\CookieClicker2\history\history_deleted.csv' não foi encontrado. Criando um novo...
+2025-01-31 14:11:47,ERRO,Erro ao limpar os logs: [Errno 2] No such file or directory: 'C:\\Users\\Marcelo\\Documents\\Code\\Python\\Selenium\\CookieClicker2\\history\\history_deleted.csv'
+2025-01-31 14:11:50,ERRO,O arquivo 'C:\Users\Marcelo\Documents\Code\Python\Selenium\CookieClicker2\history\history_deleted.csv' não foi encontrado. Criando um novo...
+2025-01-31 14:11:50,ERRO,Erro ao limpar os logs: [Errno 2] No such file or directory: 'C:\\Users\\Marcelo\\Documents\\Code\\Python\\Selenium\\CookieClicker2\\history\\history_deleted.csv'

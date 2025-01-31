@@ -19,8 +19,6 @@ def buy_upgrades(driver):
                 upgrade.click()
             except:
                 continue  # Ignora erros individuais
-
-        log_event("INFO", "Upgrades comprados com sucesso.")
         last_upgrade_time = time.time()  # Atualiza o tempo da última compra de upgrade
 
     except Exception as e:

@@ -8,3 +8,4 @@ def click_cookie(driver):
         cookie.click()
     except Exception as e:
         log_event("ERRO", f"Erro ao clicar no cookie: {e}")
+#teste
